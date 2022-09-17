@@ -13,7 +13,6 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-
   constructor(private dialog: MatDialog,
               private fb: FormBuilder,
               private userService: UserService,

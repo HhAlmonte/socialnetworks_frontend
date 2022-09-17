@@ -1,27 +1,68 @@
 <div class="register">
   <div class="register__header">
-    <img class="close" (click)="offRegister()" src="../../../../../assets/img/close.png" alt="close">
-    <h2 class="title">Registrarte </h2>
+    <img
+      class="close"
+      (click)="offRegister()"
+      src="../../../../../assets/img/close.png"
+      alt="close"
+    />
+    <h2 class="title">Registrarte</h2>
     <p class="subtitle">Es rápido y fácil</p>
     <div class="line"></div>
   </div>
-  <form class="form">
+
+  <form [formGroup]="register" (ngSubmit)="registerUser()" class="form">
     <div class="form__column">
-      <input required class="form-input mr10" type="text" placeholder="Nombre">
-      <input required class="form-input" type="text" placeholder="Apellido">
+      <input
+        formControlName="Name"
+        placeholder="Nombre"
+        type="text"
+        class="form-input mr10"
+        required
+      />
+      <input
+        formControlName="LastName"
+        placeholder="Apellido"
+        type="text"
+        class="form-input"
+        required
+      />
     </div>
 
-    <input required class="form-input" type="text" placeholder="Nombre de usuario (apodo)">
-    <input required class="form-input" type="text" placeholder="Email address or phone number">
-    <input required class="form-input" type="password" placeholder="Password">
+    <input
+      formControlName="UserName"
+      placeholder="Nombre de usuario (apodo)"
+      type="text"
+      class="form-input"
+    />
+    <input
+      formControlName="Email"
+      placeholder="Email address or phone number"
+      type="email"
+      class="form-input"
+    />
+    <input
+      formControlName="Password"
+      placeholder="Password"
+      type="password"
+      class="form-input"
+    />
 
     <div class="information">
-      <p class="information__text">Es posible que las personas que usan nuestro servicio hayan subido tu información de contacto a Facebook. <a>Obten más información</a></p>
-      <p class="information__text">Al hacer clic en "Registrarte", aceptas nuestras <a>Condiciones</a>, la <a>Política de privacidad</a> y la <a>Política de cookies</a>. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
+      <p class="information__text">
+        Es posible que las personas que usan nuestro servicio hayan subido tu
+        información de contacto a Facebook. <a>Obten más información</a>
+      </p>
+      <p class="information__text">
+        Al hacer clic en "Registrarte", aceptas nuestras <a>Condiciones</a>, la
+        <a>Política de privacidad</a> y la <a>Política de cookies</a>. Es
+        posible que te enviemos notificaciones por SMS, que puedes desactivar
+        cuando quieras
+      </p>
     </div>
 
     <div class="create-button">
-        <button type="submit" class="regiser-btn">Registrarte</button>
+      <button type="submit" class="regiser-btn">Registrarte</button>
     </div>
   </form>
 </div>

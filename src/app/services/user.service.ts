@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { login_user, user } from '@app/models/user.models';
+import { login_user, register_user } from '@app/models/user.models';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 
@@ -19,7 +19,7 @@ export class UserService {
   login(user: login_user): Observable<any>{
     return this.http.post(this.myAppUrl + this.myApiUrl + 'login/', user);
   }
-  regiset(user: user): Observable<any>{
+  register(user: register_user): Observable<any>{
     return this.http.post(this.myAppUrl + this.myApiUrl + 'register/', user);
   }
 
