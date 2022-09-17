@@ -1,0 +1,108 @@
+// register modal
+.register {
+  max-width: 992px;
+  margin: auto;
+  max-width: 450px;
+  margin: auto;
+
+  // Register Header
+  &__header {
+    margin-top: -10px;
+    .title {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      margin-bottom: -10px;
+    }
+  }
+
+  // register form
+  .form {
+    line-height: 16px;
+    // form's input
+    .form-input {
+      width: 100%;
+      height: 40px;
+      font-size: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 0 15px;
+      margin-bottom: 15px;
+      background: #f5f6f7;
+    }
+
+    &__column{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mr10{
+      margin-right: 10px;
+    }
+  }
+  // register button
+  .create-button {
+    text-align: center;
+    .regiser-btn {
+      background: none;
+      background-color: #00a400;
+      border: none;
+      border-radius: 6px;
+      box-shadow: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      height: 36px;
+      overflow: hidden;
+      padding: 0 32px;
+      text-shadow: none;
+      cursor: pointer;
+      &:hover {
+        background: #7fae7e;
+      }
+    }
+  }
+
+  // register information
+  .information {
+    margin-bottom: 15px;
+    &__text {
+      width: auto;
+      color: #777;
+      font-size: 11px;
+
+      a {
+        color: #1b74e4;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// line break
+.line {
+  align-items: center;
+  border-bottom: 1px solid #dadde1;
+  display: flex;
+  margin: 20px -23px;
+  text-align: center;
+}
+
+.close{
+  position: relative;
+  left: 390px;
+  top: 2px;
+  cursor: pointer;
+  width: 14px;
+
+  @media screen and (max-width: 992px) {
+    left: 340px;
+  }
+}
